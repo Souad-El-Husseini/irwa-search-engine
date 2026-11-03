@@ -1,9 +1,4 @@
-"""IRWA Part 2: search built on Part 1's seven-field preprocessing.
 
-The module intentionally avoids any API or external search engine. It uses
-product IDs (pid) as document IDs and the same English stop words, RegexpTokenizer
-and Porter stemmer as the group's original Part 1 notebook.
-"""
 from __future__ import annotations
 import ast
 from collections import Counter, defaultdict
@@ -21,7 +16,6 @@ _TOKENIZER = RegexpTokenizer(r"\w+")
 
 
 def stopword_set() -> set[str]:
-    """Return the English NLTK stop words used in Part 1, keeping 'no' and 'not'."""
     try:
         words = set(stopwords.words("english"))
     except LookupError as exc:
@@ -31,7 +25,6 @@ def stopword_set() -> set[str]:
 
 
 def preprocess(text: Any, stops: set[str] | None = None) -> list[str]:
-    """Lowercase, tokenize, remove stopwords and stem, exactly as in Part 1."""
     if not isinstance(text, str) or not text.strip():
         return []
     if stops is None:
@@ -40,7 +33,6 @@ def preprocess(text: Any, stops: set[str] | None = None) -> list[str]:
 
 
 def parse_tokens(value: Any) -> list[str]:
-    """Accept lists from in-memory Part 1 or their CSV-serialized representation."""
     if isinstance(value, list):
         return value
     if isinstance(value, str) and value.startswith("["):
@@ -54,7 +46,6 @@ def parse_tokens(value: Any) -> list[str]:
 
 
 def load_processed(data_dir: Path) -> tuple[pd.DataFrame, pd.DataFrame]:
-    """Load Part 1 outputs; report actionable error if missing."""
     a, b = data_dir / "fashion_products.csv", data_dir / "index_info.csv"
     if not a.exists() or not b.exists():
         raise FileNotFoundError("Part 1 CSVs missing. Run: python -m project_progress.part_2.prepare_data")
@@ -70,11 +61,6 @@ def load_processed(data_dir: Path) -> tuple[pd.DataFrame, pd.DataFrame]:
 
 
 def build_inverted_index(index_df: pd.DataFrame):
-    """term -> field -> {pid: positions}; also return per-product TF and DF.
-
-    Positional postings retain repetitions. The AND step counts the term once
-    per product, while TF incorporates its repeated occurrences.
-    """
     idx = defaultdict(lambda: defaultdict(dict))
     tf = defaultdict(Counter)
     for item in index_df.to_dict("records"):
@@ -92,7 +78,6 @@ def build_inverted_index(index_df: pd.DataFrame):
 
 
 def conjunctive_search(query: str, idx, stops: set[str] | None = None) -> list[str]:
-    """Return PIDs that contain EVERY non-stopword query term across fields."""
     terms = list(dict.fromkeys(preprocess(query, stops)))
     if not terms:
         return []
@@ -106,12 +91,10 @@ def conjunctive_search(query: str, idx, stops: set[str] | None = None) -> list[s
 
 
 def calculate_idf(df: dict[str,int], document_count: int) -> dict[str,float]:
-    """Natural-log IDF matching the team's original Part 2 notebook."""
     return {t: math.log(document_count / freq) for t, freq in df.items() if freq > 0}
 
 
 def normalize_tf(tf: dict[str,Counter]) -> dict[str,dict[str,float]]:
-    """L2 normalize raw term counts as in the team's original Part 2 notebook."""
     out = {}
     for pid, counts in tf.items():
         norm = math.sqrt(sum(v*v for v in counts.values()))
@@ -121,7 +104,6 @@ def normalize_tf(tf: dict[str,Counter]) -> dict[str,dict[str,float]]:
 
 def rank_documents(query: str, idx, normalized_tf, idf,
                    stops: set[str] | None = None) -> list[tuple[str,float]]:
-    """AND filter, then TF-IDF weighted dot product (NOT cosine normalization)."""
     qterms = preprocess(query, stops)
     candidates = conjunctive_search(query, idx, stops)
     if not qterms or not candidates:

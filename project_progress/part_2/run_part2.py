@@ -1,10 +1,3 @@
-"""Run IRWA Part 2 from the repository root:
-
-    python -m project_progress.part_2.run_part2
-
-Writes ranking outputs, instructor-query metrics, and blank CSVs for human judges.
-Does NOT fabricate the required manual relevance labels.
-"""
 from pathlib import Path
 import argparse, json
 import pandas as pd

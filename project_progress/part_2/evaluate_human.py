@@ -1,4 +1,3 @@
-"""Evaluate manually labeled five-query judgment sheet; no auto-labeling."""
 from pathlib import Path
 import argparse
 import pandas as pd

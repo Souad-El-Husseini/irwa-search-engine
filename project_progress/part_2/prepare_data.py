@@ -1,8 +1,4 @@
-"""Generate the two data/ CSV files needed by Part 2 from the course JSON.
 
-Follows the initial (preprocessing) section of the supplied Part 1 notebook;
-it does not rerun its separate optional EDA, charts, or spaCy NER.
-"""
 from pathlib import Path
 import pandas as pd
 from .search_engine import preprocess, stopword_set, FIELDS
