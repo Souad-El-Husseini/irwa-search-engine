@@ -1,1 +1,0 @@
-"""IRWA coursework parts."""

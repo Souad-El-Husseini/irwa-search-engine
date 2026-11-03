@@ -1,8 +1,8 @@
 query_id,query,matches,judged_retrieved,known_relevant
-validation-1,women full sleeve sweatshirt cotton,500,20.0,13.0
-validation-2,men slim jeans blue,222,8.0,10.0
-custom-1,Women pyjamas,193,,
-custom-2,Blue navy jeans for women,43,,
-custom-3,Men dotted tie,3,,
-custom-4,Women silk dress,32,,
-custom-5,Men brown pant,56,,
+validation-1,women full sleeve sweatshirt cotton,500,20,13
+validation-2,men slim jeans blue,222,8,10
+custom-1,Women pyjamas,193,193,76
+custom-2,Blue navy jeans for women,43,43,6
+custom-3,Men dotted tie,3,3,3
+custom-4,Women silk dress,32,32,5
+custom-5,Men brown pant,56,56,47
