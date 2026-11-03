@@ -18,8 +18,7 @@ irwa-search-engine/
 │   ├── part_1/preprocessing.ipynb             # Team's original Part 1 notebook
 │   └── part_2/
 │       ├── README.md                         # Detailed Part 2 methodology and results
-│       ├── part2-indexing-original.ipynb     # Team's initial Part 2 notebook
-│       ├── indexing_and_evaluation.ipynb     # Reproducible overview notebook
+│       ├── part2-indexing-and-evaluation-complete.ipynb  # Complete Part 2 notebook
 │       ├── prepare_data.py                   # JSON to processed CSVs
 │       ├── search_engine.py                  # Indexing, AND retrieval, TF-IDF ranking
 │       ├── evaluation.py                     # Retrieval metrics
@@ -62,7 +61,7 @@ If both `data/fashion_products.csv` and `data/index_info.csv` already exist, you
 python -m project_progress.part_2.run_part2 --skip-prepare
 ```
 
-For notebook execution, open `project_progress/part_2/indexing_and_evaluation.ipynb`, select the project's Python environment as the Jupyter kernel, and run cells in order.
+For notebook execution, open `project_progress/part_2/part2-indexing-and-evaluation-complete.ipynb`, select the project's Python environment as the Jupyter kernel, and run cells in order.
 
 ## Outputs
 

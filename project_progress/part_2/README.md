@@ -13,8 +13,7 @@ Part 2 turns the prepared fashion catalog into a ranked search system and evalua
 | `evaluation.py` | Precision@K, Recall@K, AP@K, F1@K, RR@K, MAP, MRR, DCG@K, NDCG@K |
 | `run_part2.py` | Runs queries, saves validation scores, custom rankings and blank templates where missing |
 | `evaluate_human.py` | Evaluates completed 0/1 judgments in a CSV, saves per-query and aggregate results |
-| `indexing_and_evaluation.ipynb` | Guided notebook referencing the same Python modules |
-| `part2-indexing-original.ipynb` | Preserved initial team indexing notebook |
+| `part2-indexing-and-evaluation-complete.ipynb` | Complete Part 2 notebook covering indexing, Boolean AND retrieval, TF-IDF ranking, and evaluation |
 
 ## Indexing and retrieval design
 
@@ -77,7 +76,7 @@ Let `K = 10`, `R` be the count of judged relevant products for a given query, an
 
  query IDs: 1 = `women full sleeve sweatshirt cotton`; 2 = `men slim jeans blue`.
 
-### Custom queries — completed sheet used in the student's run
+### Custom queries — evaluation results
 
 | ID | P@10 | R@10 | AP@10 | F1@10 | RR@10 | NDCG@10 |
 |---:|---:|---:|---:|---:|---:|---:|
