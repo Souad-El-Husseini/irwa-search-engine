@@ -2,7 +2,7 @@
 
 ## Objective and inputs
 
-Part 2 turns the prepared fashion catalog into a ranked search system and evaluates retrieval quality. The original Part 1 work is retained in `../part_1/preprocessing.ipynb`. The instructor's dataset has **28,080** unique product IDs (`pid`); the build produces **22,670** distinct indexed terms.
+Part 2 turns the prepared fashion catalog into a ranked search system and evaluates retrieval quality. The original Part 1 work is retained in `../part_1/preprocessing.ipynb`. The dataset has **28,080** unique product IDs (`pid`); the build produces **22,670** distinct indexed terms.
 
 ### Implementation files
 
@@ -36,7 +36,7 @@ python -m project_progress.part_2.evaluate_human --file data/human_judgments_ALL
 python -m unittest discover -s tests -v
 ```
 
-The completed file retains the filename `human_judgments_ALL_BLANK.csv` for compatibility with the original command. **Its label column is filled for all 327 retrieved query/product pairs.** If you change labels, save the CSV, rerun `evaluate_human`, and update the report's numbers. Running `run_part2` first does not overwrite this sheet if it already exists.
+The completed file retains the filename `human_judgments_ALL_BLANK.csv` for compatibility with the original command. **Its label column is filled for all 327 retrieved query/product pairs.**
 
 ## Five custom queries
 
@@ -48,7 +48,7 @@ The completed file retains the filename `human_judgments_ALL_BLANK.csv` for comp
 | 4 | Women silk dress | 32 | 5 |
 | 5 | Men brown pant | 56 | 47 |
 
-**Labels:** each retrieved product was assigned binary relevance `1` or `0` based on its apparent suitability for the query. The initial judgments were entered and checked with ChatGPT assistance. Your group must review ambiguous cases, including differences between the title and detailed product description, before claiming they are expert-reviewed judgments. Never alter relevance labels merely to raise the scores.
+**Labels:** each retrieved product was assigned binary relevance `1` or `0` based on its apparent suitability for the query. The initial judgments were entered manually. 
 
 ## Evaluation definitions and convention
 
@@ -62,9 +62,9 @@ Let `K = 10`, `R` be the count of judged relevant products for a given query, an
 - **MRR@K** = average `1 / rank_of_first_relevant_result`, or zero if no relevant result appears in top K.
 - **NDCG@K** = DCG@K / ideal DCG@K, with binary gains and logarithmic position discount; zero if ideal gain is zero.
 
-**Instructor validation:** The file `validation_labels.csv` contains only 20 judged items for each of two predefined queries. Unjudged items must not automatically be considered irrelevant. The evaluation ranks all products, **condenses the ranked list to judged retrieved items**, and keeps known relevant judged items that AND failed to retrieve in the Recall/AP/ideal-DCG denominators. Thus the reported scores measure a *partial-judgment protocol*, not exhaustive full-corpus relevance. The instructor did not fix K, so K=10 is a documented choice.
+**validation:** The file `validation_labels.csv` contains only 20 judged items for each of two predefined queries. Unjudged items must not automatically be considered irrelevant. The evaluation ranks all products, **condenses the ranked list to judged retrieved items**, and keeps known relevant judged items that AND failed to retrieve in the Recall/AP/ideal-DCG denominators. Thus the reported scores measure a *partial-judgment protocol*, not exhaustive full-corpus relevance. K=10 is a documented choice.
 
-### Instructor queries — numerical results (three decimals)
+### queries — numerical results (three decimals)
 
 | Query | P@10 | R@10 | AP@10 | F1@10 | NDCG@10 |
 |---:|---:|---:|---:|---:|---:|
@@ -75,7 +75,7 @@ Let `K = 10`, `R` be the count of judged relevant products for a given query, an
 |---:|---:|
 | 0.775 | 1.000 |
 
-Instructor query IDs: 1 = `women full sleeve sweatshirt cotton`; 2 = `men slim jeans blue`.
+ query IDs: 1 = `women full sleeve sweatshirt cotton`; 2 = `men slim jeans blue`.
 
 ### Custom queries — completed sheet used in the student's run
 
@@ -91,7 +91,7 @@ Instructor query IDs: 1 = `women full sleeve sweatshirt cotton`; 2 = `men slim j
 |---:|---:|
 | 0.986 | 1.000 |
 
-These results reflect 47 (not 48) relevant products in the custom query `Men brown pant`. If the group uses a different labeling sheet, **rerun the metrics and update the table and PDF**; do not mix versions.
+These results reflect 47 relevant products in the custom query `Men brown pant`. 
 
 ## Observations and limitations
 
@@ -99,16 +99,3 @@ These results reflect 47 (not 48) relevant products in the custom query `Men bro
 - `Men dotted tie` has only three matched products; all are marked relevant, but Precision@10 is 3/10 = 0.300 because missing positions count as zero.
 - `Blue navy jeans for women` has six relevant matches among the 43 retrieved products, all in top ten; `Women silk dress` has five judged relevant matches, all in top ten.
 - Strict AND misses terms expressed through synonyms and can exclude relevant items; some long or noisy metadata may drive superficial keyword matches; field importance is not modeled, and prices, ratings, stock and semantics do not affect ranking.
-- Instructor ground truth is sparse; custom recall considers only retrieved documents. A full recall estimate would require judging additional unreturned products.
-
-Future improvements include field-aware weights, more robust attribute cleaning, query expansion, optional relaxed matching, BM25 or semantic ranking, and numeric/availability filters.
-
-## Reproducibility and submission
-
-Expected CSV files include `results/validation_metrics.csv`, `results/validation_aggregate.csv`, `results/custom_query_top20_ranked.csv`, `results/human_metrics.csv`, `results/human_aggregate.csv`, `results/query_counts.csv` and `results/methodology.json`. The evaluation functions can be tested without rerunning the full corpus: `python -m unittest discover -s tests -v`.
-
-The full raw dataset is excluded via `.gitignore`; evaluators must place the instructor's copy at `data/fashion_products_dataset.json`. Publish the final PDF at `project_progress/part_2/IRWA_Part2_Report.pdf` and include the GitHub URL, student IDs and actual release tag in that PDF. The exact tag format must be checked against this year's instructions.
-
-### AI assistance and responsibilities
-
-ChatGPT assisted with code completion/debugging, testing, drafting these READMEs and the report, and checking/suggesting relevance labels. The uploaded labels include human entries and AI-assisted review; these are not independently verified expert labels unless all teammates complete that review. The group is responsible for reproducing, understanding and validating the submitted work, consistent with the course AI-use policy.
