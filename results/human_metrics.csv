@@ -1,0 +1,6 @@
+query_id,query,Precision,Recall,AP,F1,RR,NDCG
+1,Women pyjamas,1.000,0.132,1.000,0.233,1.000,1.000
+2,Blue navy jeans for women,0.600,1.000,0.931,0.750,1.000,0.978
+3,Men dotted tie,0.300,1.000,1.000,0.462,1.000,1.000
+4,Women silk dress,0.500,1.000,1.000,0.667,1.000,1.000
+5,Men brown pant,1.000,0.213,1.000,0.351,1.000,1.000

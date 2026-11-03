@@ -1,0 +1,41 @@
+query_id,query,pid,relevance,retrieved,judged_pool_rank
+1,women full sleeve sweatshirt cotton,SWSFFVKBCQG5FHPF,1,True,5.0
+1,women full sleeve sweatshirt cotton,SWSFJY5ZFHQ7HXKW,0,True,15.0
+1,women full sleeve sweatshirt cotton,SWSFUY89NHMZHZPX,1,True,12.0
+1,women full sleeve sweatshirt cotton,SWSFXQ5YX6RZKHP4,1,True,10.0
+1,women full sleeve sweatshirt cotton,JCKFTZBC3DMCVYXH,0,True,16.0
+1,women full sleeve sweatshirt cotton,SWSFWCTDHRABJFCR,1,True,8.0
+1,women full sleeve sweatshirt cotton,TSHFUH9FABXHSDPJ,0,True,18.0
+1,women full sleeve sweatshirt cotton,SWSFVGKENHBSVUWJ,1,True,13.0
+1,women full sleeve sweatshirt cotton,JCKF7M8DNBB6WZ8Y,1,True,14.0
+1,women full sleeve sweatshirt cotton,SWSFWCSPEGMDH8FV,1,True,4.0
+1,women full sleeve sweatshirt cotton,SWSFXYRYTHZWSZPE,1,True,2.0
+1,women full sleeve sweatshirt cotton,TSHFUH9HG5ZHC6FS,0,True,17.0
+1,women full sleeve sweatshirt cotton,SWSFUY89CJ9WZYQC,0,True,11.0
+1,women full sleeve sweatshirt cotton,TSHFUH9PKWETBZZB,0,True,19.0
+1,women full sleeve sweatshirt cotton,SWSFW6BQ74JCVHHH,1,True,7.0
+1,women full sleeve sweatshirt cotton,SWSF5R7F38FNMWXG,1,True,3.0
+1,women full sleeve sweatshirt cotton,SWSFWEFYEW4AZYTZ,1,True,6.0
+1,women full sleeve sweatshirt cotton,SWSFN8YZXFSUCAJX,1,True,9.0
+1,women full sleeve sweatshirt cotton,SWSFMJGS8HVBPEH6,1,True,1.0
+1,women full sleeve sweatshirt cotton,TSHFY24T4KGF2NYU,0,True,20.0
+2,men slim jeans blue,JEAFVXG4GGZH9VFA,1,True,6.0
+2,men slim jeans blue,JEAFUZXTN7W8ZSEN,0,True,4.0
+2,men slim jeans blue,JEAFUZXTXTHZEFV5,0,False,
+2,men slim jeans blue,JEAF8CHSVCP5GUH9,1,False,
+2,men slim jeans blue,JEAFUZXRDZWSYWGG,1,True,3.0
+2,men slim jeans blue,JEAFTGSGTYKZGAEZ,1,True,5.0
+2,men slim jeans blue,JEAFUZXRDYSVFK4Y,1,False,
+2,men slim jeans blue,JEAFS2JG6N7ZTFYS,0,False,
+2,men slim jeans blue,JEAFWG4GK2HGF7AF,0,False,
+2,men slim jeans blue,JEAE32FSQ4JXYJK6,1,True,7.0
+2,men slim jeans blue,JEAFUZXRAGHXHEGB,0,False,
+2,men slim jeans blue,JEAFQFGWXSVSMRWC,0,False,
+2,men slim jeans blue,JEAFHEZH9KVGTJJS,0,True,8.0
+2,men slim jeans blue,JEAFUPSWVCTKXMHF,1,False,
+2,men slim jeans blue,JEAFSKYHRVZSABPR,1,True,1.0
+2,men slim jeans blue,JEAFUZXSQQHZXRYM,1,True,2.0
+2,men slim jeans blue,JEAFUZXSMRFFNGC2,1,False,
+2,men slim jeans blue,JEAFWZXE6KYHBZRU,0,False,
+2,men slim jeans blue,JEAFS2JWKPBRNYTU,0,False,
+2,men slim jeans blue,JEAEKZFJHSKJMV58,0,False,

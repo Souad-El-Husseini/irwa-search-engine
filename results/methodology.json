@@ -1,0 +1,28 @@
+{
+  "num_products": 28080,
+  "vocabulary_size": 22670,
+  "fields": [
+    "title",
+    "description",
+    "brand",
+    "category",
+    "sub_category",
+    "seller",
+    "product_details"
+  ],
+  "k": 10,
+  "tf": "raw term counts normalized by L2",
+  "idf": "ln(N/df)",
+  "ranking": "TF-IDF weighted query-document dot product (not cosine)",
+  "retrieval": "AND intersect across seven fields",
+  "validation_protocol": "condensed to judged retrieved products; unknown unjudged ignored",
+  "ap_denominator": "min(K, total relevant in judged pool)",
+  "validation_judgments": 40,
+  "custom_queries": [
+    "Women pyjamas",
+    "Blue navy jeans for women",
+    "Men dotted tie",
+    "Women silk dress",
+    "Men brown pant"
+  ]
+}

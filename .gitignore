@@ -1,0 +1,17 @@
+# Local Python environment / secrets
+.venv/
+irwa_venv/
+__pycache__/
+.ipynb_checkpoints/
+.env
+*.pyc
+.DS_Store
+
+# Course corpus is large; keep it locally or use Git LFS.
+# GitHub web uploads cannot handle these raw/generated files easily.
+data/fashion_products_dataset.json
+data/fashion_products.csv
+data/index_info.csv
+.env.*
+.vscode/
+*.log
