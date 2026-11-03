@@ -16,8 +16,4 @@ validation-2                 men slim jeans blue      222               8.0     
     custom-4                    Women silk dress       32               NaN             NaN
     custom-5                      Men brown pant       56               NaN             NaN
 
-Your group must fill the blank label column in:
-  /mnt/data/IRWA_Part2_Complete/data/human_judgments_ALL_BLANK.csv
-  /mnt/data/IRWA_Part2_Complete/data/human_judgments_TOP10_BLANK.csv
-Then run: python -m project_progress.part_2.evaluate_human --file data/human_judgments_ALL_BLANK.csv
-ELAPSED 23.20 sec PEAK_MEMORY 583452KB
+
