@@ -11,29 +11,61 @@ This repository contains Python code for a local information retrieval engine ov
 ```text
 irwa-search-engine/
 ├── data/
-│   ├── validation_labels.csv                  # Instructor relevance judgments
+│   ├── README.md
 │   ├── human_judgments_ALL_BLANK.csv          # Completed 0/1 judgments; legacy filename
+│   ├── human_judgments_TOP10_BLANK.csv
+│   ├── processed_data.zip
+│   ├── validation_labels.csv                  # Instructor relevance judgments
 │   └── fashion_products_dataset.json         # Obtain from course; keep locally
 ├── project_progress/
-│   ├── part_1/preprocessing.ipynb             # Team's original Part 1 notebook
+│   ├── part_1/
+│   │   ├── IRWA-2026-u231910-u279092-279112-part-1.pdf
+│   │   └── preprocessing.ipynb             # Team's original Part 1 notebook
 │   ├── part_2/
-│       ├── README.md                         # Detailed Part 2 methodology and results
-│       ├── part2-indexing-and-evaluation-complete.ipynb  # Complete Part 2 notebook
-│       ├── prepare_data.py                   # JSON to processed CSVs
-│       ├── search_engine.py                  # Indexing, AND retrieval, TF-IDF ranking
-│       ├── evaluation.py                     # Retrieval metrics
-│       ├── run_part2.py                      # Corpus indexing and validation
-│       ├── evaluate_human.py                 # Custom-query evaluation
-│   │   └── IRWA-2026-u231910-u279092-u279112-part-2.pdf # Part 2 report
+│   │   ├── IRWA-2026-u231910-u279092-u279112-part-2.pdf # Part 2 report 
+│   │   ├── README.md                         # Detailed Part 2 methodology and results 
+│   │   ├── evaluate_human.py                 # Custom-query evaluation 
+│   │   ├── evaluation.py                     # Retrieval metrics 
+│   │   ├── part2-indexing-and-evaluation-complete.ipynb  # Complete Part 2 notebook 
+│   │   ├── prepare_data.py                   # JSON to processed CSVs 
+│   │   ├── run_part2.py                      # Corpus indexing and validation
+│   │   └── search_engine.py                  # Indexing, AND retrieval, TF-IDF ranking
 │   └── part_3/                               # Four ranking methods and experiments
 │       ├── part3-ranking-and-filtering.ipynb
 │       ├── part3_ranking.py
 │       ├── run_part3.py
 │       └── README.md
 ├── results/                                  # Reproducible CSV outputs
-├── tests/test_part2.py                       # Basic retrieval/metric tests
+│   ├── custom_query_top20_ranked.csv
+│   ├── human_aggregate.csv
+│   ├── human_metrics.csv
+│   ├── methodology.json
+│   ├── query_counts.csv
+│   ├── validation_aggregate.csv
+│   ├── validation_metrics.csv
+│   └── validation_qrels_debug.csv
+├── static/
+│   └── styles/
+│   │   ├── bootstrap.min.css
+│   │   ├── bootstrap.min.css.map
+│   │   └── custom.css
+│   ├── image.png
+│   └── logo.png
+├── templates/
+│   ├── base.html
+│   ├── dashboard.html
+│   ├── doc_details.html
+│   ├── index.html
+│   ├── results.html
+│   └── stats.html
+├── tests/
+│   ├── test_part2.py                       # Basic retrieval/metric tests
+│   └── test_part3.py
+├── .gitattributes
+├── .gitignore
+├── README.md
 ├── requirements.txt
-└── README.md
+└── web_app.py
 ```
 
 The large original dataset and two generated intermediate CSVs (`fashion_products.csv`, `index_info.csv`) are **not tracked** under the existing `.gitignore`. Product identifiers remain unchanged so results can be joined against `validation_labels.csv` and the complete judgment sheet.
