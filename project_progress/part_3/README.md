@@ -43,3 +43,7 @@ The Word2Vec model can also be saved for reproducibility.
 All ranking methods use the same AND retrieval candidates. Queries with fewer than 20 matching products return fewer than 20 results.
 
 The Part 3 report draft is separate and needs actual experimental ranking tables before submission.
+
+## Verification
+
+Run `python -m unittest discover -s tests -v` from the repository root after installing `requirements.txt`. Part 3 test cases use synthetic products; run the notebook in Colab to verify the complete fashion corpus and generate actual ranking results.
