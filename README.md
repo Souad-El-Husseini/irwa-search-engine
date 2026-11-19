@@ -2,7 +2,7 @@
 
 **Course:** Information Retrieval and Web Analytics (IRWA)  
 **Project:** Fashion product search engine  
-**Status:** Part 2 (Indexing and Evaluation) implemented and evaluated; Part 3 and Part 4 are future project stages.
+**Status:** Parts 1 and 2 completed; Part 3 ranking implementation added and awaiting full-dataset evaluation. Part 4 is a future project stage.
 
 This repository contains Python code for a local information retrieval engine over the provided fashion-products dataset. Part 1 performs text preprocessing. Part 2 builds a seven-field inverted index, retrieves documents using Boolean **AND**, ranks matches using a TF-IDF weighted dot product, and evaluates the results with instructor-supplied and custom relevance judgments.
 
@@ -16,7 +16,7 @@ irwa-search-engine/
 │   └── fashion_products_dataset.json         # Obtain from course; keep locally
 ├── project_progress/
 │   ├── part_1/preprocessing.ipynb             # Team's original Part 1 notebook
-│   └── part_2/
+│   ├── part_2/
 │       ├── README.md                         # Detailed Part 2 methodology and results
 │       ├── part2-indexing-and-evaluation-complete.ipynb  # Complete Part 2 notebook
 │       ├── prepare_data.py                   # JSON to processed CSVs
@@ -24,7 +24,12 @@ irwa-search-engine/
 │       ├── evaluation.py                     # Retrieval metrics
 │       ├── run_part2.py                      # Corpus indexing and validation
 │       ├── evaluate_human.py                 # Custom-query evaluation
-│       └── IRWA_Part2_Report.pdf             # Part 2 written report
+│   │   └── IRWA-2026-u231910-u279092-u279112-part-2.pdf # Part 2 report
+│   └── part_3/                               # Four ranking methods and experiments
+│       ├── part3-ranking-and-filtering.ipynb
+│       ├── part3_ranking.py
+│       ├── run_part3.py
+│       └── README.md
 ├── results/                                  # Reproducible CSV outputs
 ├── tests/test_part2.py                       # Basic retrieval/metric tests
 ├── requirements.txt
