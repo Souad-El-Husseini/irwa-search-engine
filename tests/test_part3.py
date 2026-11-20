@@ -72,6 +72,34 @@ class Part3Tests(unittest.TestCase):
         expected = 0.40 * cosine + 0.20 + 0.15 * 0.5 + 0.15 * 0 + 0.10
         self.assertAlmostEqual(dict(self.engine.custom(query))["C"], expected)
 
+    def test_adjusted_preserves_and_candidates(self):
+        for q in ("blue cotton", "red jeans", "missingterm"):
+            original = {pid for pid, _ in self.engine.custom(q)}
+            adjusted = {pid for pid, _ in self.engine.custom_adjusted(q)}
+            self.assertEqual(original, adjusted)
+
+    def test_adjusted_type_mismatch_penalty(self):
+        from project_progress.part_3.part3_ranking import (
+            _match_factor, _matching_groups, PRODUCT_TYPE_GROUPS,
+        )
+        requested = _matching_groups(set(self.engine.terms("blue jeans")), PRODUCT_TYPE_GROUPS)
+        self.assertEqual(_match_factor(requested, set(self.engine.terms("blue shirt")), 0.35), 0.35)
+        self.assertEqual(_match_factor(requested, set(self.engine.terms("blue jeans")), 0.35), 1.0)
+
+    def test_adjusted_attribute_match_and_neutral(self):
+        from project_progress.part_3.part3_ranking import (
+            _match_factor, _matching_groups, ATTRIBUTE_GROUPS,
+        )
+        groups = _matching_groups(set(self.engine.terms("blue navy jeans")), ATTRIBUTE_GROUPS)
+        self.assertEqual(len(groups), 1)  # blue/navy represent one color
+        self.assertEqual(_match_factor(groups, {"red"}, 0.70), 0.70)
+        self.assertEqual(_match_factor(groups, {"blue"}, 0.70), 1.0)
+        self.assertEqual(_match_factor([], set(), 0.70), 1.0)
+
+    def test_adjusted_is_available_as_results_table(self):
+        table = self.engine.results_table("blue cotton", "Smart Shopper Adjusted", top_k=10)
+        self.assertEqual(len(table), 2)
+
     def test_word2vec(self):
         self.engine.train_word2vec(vector_size=12, epochs=3)
         ranked = self.engine.word2vec_cosine("blue cotton")
