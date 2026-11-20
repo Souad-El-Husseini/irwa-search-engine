@@ -1,0 +1,84 @@
+query_id,query,ranking_method,rank,pid,title,brand,score,average_rating,discount,out_of_stock
+1,Women pyjamas,Word2Vec cosine,1,PYJFZMJN25GEGHQE,Women Pyjama  (Pack of 1),Bonnevil,0.784358,,65% off,False
+1,Women pyjamas,Word2Vec cosine,2,PYJFZMJNGEDZGHEZ,Women Pyjama  (Pack of 1),Bonnevil,0.783728,,65% off,False
+1,Women pyjamas,Word2Vec cosine,3,PYJFZMJNHZF3ZYNR,Women Pyjama  (Pack of 1),Bonnevil,0.782951,,65% off,False
+1,Women pyjamas,Word2Vec cosine,4,PYJFZMJNRQDEFBHB,Women Pyjama  (Pack of 1),Bonnevil,0.782769,,65% off,False
+1,Women pyjamas,Word2Vec cosine,5,PYJFZMJNAWFWGEGA,Women Pyjama  (Pack of 1),Bonnevil,0.782408,,65% off,False
+1,Women pyjamas,Word2Vec cosine,6,PYJFZMJNFPHYWZN7,Women Pyjama  (Pack of 1),Bonnevil,0.782277,,65% off,False
+1,Women pyjamas,Word2Vec cosine,7,PYJFZMJNGNZ6GMKZ,Women Pyjama  (Pack of 1),Bonnevil,0.781272,,65% off,False
+1,Women pyjamas,Word2Vec cosine,8,ETHFT9HQRGEXHETK,Women Kurta and Pyjama Set Cotton Blend,Jagdish Garmen,0.778766,3.0,35% off,False
+1,Women pyjamas,Word2Vec cosine,9,ETHFTUCYRRM5RJYF,Women Kurta and Pyjama Set Cotton Blend,Jagdish Garmen,0.776963,,47% off,False
+1,Women pyjamas,Word2Vec cosine,10,ETHFT9HQDDYTZZT5,Women Kurta and Pyjama Set Cotton Blend,Jagdish Garmen,0.772459,3.0,35% off,False
+1,Women pyjamas,Word2Vec cosine,11,ETHFT9HQNKWEF2EH,Women Kurta and Pyjama Set Cotton Blend,Jagdish Garmen,0.771747,3.0,35% off,False
+1,Women pyjamas,Word2Vec cosine,12,NSTFV25KJ9G34MHC,Women Printed Multicolor Top & Pyjama Set,INTER CREATI,0.765239,3.7,44% off,False
+1,Women pyjamas,Word2Vec cosine,13,NSTFWFZZK6ASEJTJ,Women Solid Multicolor Top & Pyjama Set,INTER CREATI,0.759612,4.8,41% off,False
+1,Women pyjamas,Word2Vec cosine,14,NSTFXK9NZMTEDJCR,Women Solid Multicolor Top & Pyjama Set,INTER CREATI,0.759612,3.7,41% off,False
+1,Women pyjamas,Word2Vec cosine,15,NSTFXK9YY3GHFYJT,Women Solid Multicolor Top & Pyjama Set,INTER CREATI,0.759612,4.8,41% off,False
+1,Women pyjamas,Word2Vec cosine,16,ETHFZDS5FXFK9W9X,"Women Kurta and Pyjama Set Cambric, Cambric",PATWA AND COMPA,0.758861,,16% off,False
+1,Women pyjamas,Word2Vec cosine,17,ETHFTKKFHZTWXEXG,Women Kurta and Pyjama Set Cotton Blend,Jagdish Garmen,0.757789,,43% off,False
+1,Women pyjamas,Word2Vec cosine,18,ETHFTTFCMG8JTDCZ,Women Kurta and Pyjama Set Cotton Blend,Jagdish Garmen,0.756422,,41% off,False
+1,Women pyjamas,Word2Vec cosine,19,ETHFYY5JJ2R3ZHXH,Women Kurta and Pyjama Set Pure Cotton,Purple Sta,0.756167,2.9,41% off,False
+1,Women pyjamas,Word2Vec cosine,20,ETHFTTFEGXZFJ96Q,Women Kurta and Pyjama Set Cotton Blend,Jagdish Garmen,0.75579,,47% off,False
+2,Blue navy jeans for women,Word2Vec cosine,1,SHTFVX89G2GXG96E,Women Slim Fit Checkered Spread Collar Casual Shirt,Lev,0.775196,3.3,20% off,True
+2,Blue navy jeans for women,Word2Vec cosine,2,TSHFRKJFGWPXGJHG,Solid Women Polo Neck Dark Blue T-Shirt,Lev,0.770229,2.2,20% off,False
+2,Blue navy jeans for women,Word2Vec cosine,3,TSHFQFPCNSKQAGN6,Striped Women Polo Neck Green T-Shirt,Lev,0.769635,3.5,20% off,True
+2,Blue navy jeans for women,Word2Vec cosine,4,JEAFSFTGDPEBJJGW,Slim Women Dark Blue Jeans,Lev,0.768474,,20% off,True
+2,Blue navy jeans for women,Word2Vec cosine,5,JEAFSKYHNDQXV5ZC,Tapered Fit Women Blue Jeans,ECKO Unl,0.765416,3.5,40% off,False
+2,Blue navy jeans for women,Word2Vec cosine,6,JEAFVWFK6AFRNSFY,Skinny Women Dark Blue Jeans,Lev,0.764635,,20% off,True
+2,Blue navy jeans for women,Word2Vec cosine,7,JEAFTZFX7HR5HZVW,Slim Women Dark Blue Jeans,Lev,0.763791,,20% off,True
+2,Blue navy jeans for women,Word2Vec cosine,8,JEAFQFGWXSVSMRWC,Slim Women Dark Blue Jeans,Lev,0.760241,,20% off,True
+2,Blue navy jeans for women,Word2Vec cosine,9,JEAFVXFGRTEZZ3UB,Skinny Women Dark Blue Jeans,Lev,0.753919,2.2,28% off,False
+2,Blue navy jeans for women,Word2Vec cosine,10,TSHFY3EUCDPBYYFX,Color Block Women Round Neck Dark Blue T-Shirt,BLACK SN,0.731618,,56% off,False
+2,Blue navy jeans for women,Word2Vec cosine,11,KTAFUTGX8BAFZAW8,Women Printed Pure Cotton Straight Kurta  (Dark Blue),Szto,0.727784,,55% off,True
+2,Blue navy jeans for women,Word2Vec cosine,12,TSHFPHPHADJRNGSZ,"Solid Women Henley Neck Dark Blue, Green T-Shirt  (Pack of 3)",SEVN,0.720892,3.8,80% off,False
+2,Blue navy jeans for women,Word2Vec cosine,13,TSHFPHPHR4QCCHGM,"Solid Women Henley Neck Dark Blue, Black T-Shirt  (Pack of 3)",SEVN,0.719114,3.8,80% off,False
+2,Blue navy jeans for women,Word2Vec cosine,14,TSHFPHPHMFZHKSKH,"Solid Women Henley Neck Dark Blue, Red T-Shirt  (Pack of 3)",SEVN,0.714757,3.8,80% off,False
+2,Blue navy jeans for women,Word2Vec cosine,15,TSHFYEADFTMF2VDG,Printed Women Polo Neck Blue T-Shirt,Crocks Cl,0.713406,3.0,60% off,False
+2,Blue navy jeans for women,Word2Vec cosine,16,TSHFG287GG6YHXZD,Self Design Women Hooded Neck Dark Blue T-Shirt,Dudli,0.710642,4.1,44% off,False
+2,Blue navy jeans for women,Word2Vec cosine,17,TOPF2ZBYTV6FAZ6S,Solid Women Polo Neck Dark Blue T-Shirt,FLEXIM,0.708743,4.0,46% off,False
+2,Blue navy jeans for women,Word2Vec cosine,18,TSHFYWYPAFGHWHAE,Printed Women Polo Neck Dark Blue T-Shirt,ARBO,0.701295,4.3,44% off,False
+2,Blue navy jeans for women,Word2Vec cosine,19,TSHFTT2G6ZG6PVVH,Solid Women Round Neck Blue T-Shirt,PixF,0.698845,3.9,76% off,False
+2,Blue navy jeans for women,Word2Vec cosine,20,TSHFFHA5AFHKBKYW,Solid Women Hooded Neck Dark Blue T-Shirt,Dudli,0.698542,2.9,44% off,False
+3,Men dotted tie,Word2Vec cosine,1,CTPFVSTDYXRPXGKY,nu-Lite Satin Tie & Cufflink  (Blue),,0.759029,2.7,71% off,False
+3,Men dotted tie,Word2Vec cosine,2,CTPFW6365D8JPGY5,nu-Lite Satin Tie Pin Set  (Pink),,0.7413,2.7,82% off,False
+3,Men dotted tie,Word2Vec cosine,3,CTPFVQNNHGYFTGFN,nu-Lite Satin Tie & Cufflink  (Blue),,0.703349,2.7,79% off,False
+4,Women silk dress,Word2Vec cosine,1,KTAFVNGENKKJNNGZ,Women Solid Cotton Blend Ethnic Dress  (Grey),Jagdish Garmen,0.70282,,58% off,False
+4,Women silk dress,Word2Vec cosine,2,KTAFVNGEJN3T79GR,Women Solid Cotton Blend Ethnic Dress  (Blue),Jagdish Garmen,0.702544,,58% off,False
+4,Women silk dress,Word2Vec cosine,3,KTAFVPFKWGDFQGEE,Women Solid Khadi Silk Ethnic Dress  (Black),SATDEVANGIKHADIBHAND,0.688622,3.8,30% off,False
+4,Women silk dress,Word2Vec cosine,4,KTAFVPFKACERTGVH,Women Solid Khadi Silk Ethnic Dress  (Black),SATDEVANGIKHADIBHAND,0.68838,3.8,30% off,False
+4,Women silk dress,Word2Vec cosine,5,KTAFVPFKU9JYRNGZ,Women Solid Khadi Silk Ethnic Dress  (Black),SATDEVANGIKHADIBHAND,0.688335,3.8,30% off,False
+4,Women silk dress,Word2Vec cosine,6,KTAFVPFKEY4RPDYF,Women Solid Khadi Silk Ethnic Dress  (Black),SATDEVANGIKHADIBHAND,0.688126,3.8,30% off,False
+4,Women silk dress,Word2Vec cosine,7,KTAFVPFKHZW4YVZS,Women Solid Khadi Silk Ethnic Dress  (Black),SATDEVANGIKHADIBHAND,0.685014,3.8,30% off,False
+4,Women silk dress,Word2Vec cosine,8,CTPFVSXF9FNZGKXP,nu-Lite Satin Tie Pin Set  (Brown),,0.636971,2.7,77% off,False
+4,Women silk dress,Word2Vec cosine,9,CTPFVZHSA7G4PFC5,nu-Lite Satin Tie & Cufflink  (Grey),,0.636816,4.3,80% off,False
+4,Women silk dress,Word2Vec cosine,10,CTPFVPJ7HY68S45F,nu-Lite Satin Tie Pin Set  (Green),,0.636781,2.7,77% off,False
+4,Women silk dress,Word2Vec cosine,11,CTPFVPKKWBZUCH7Y,nu-Lite Satin Tie Pin Set  (Green),,0.636662,4.3,77% off,True
+4,Women silk dress,Word2Vec cosine,12,CTPFVPGH5AGD8PZX,nu-Lite Satin Tie Pin Set  (Black),,0.636503,,77% off,True
+4,Women silk dress,Word2Vec cosine,13,CTPFVPJZKBVGK2FV,nu-Lite Satin Tie & Cufflink  (Multicolor),,0.636426,2.7,79% off,False
+4,Women silk dress,Word2Vec cosine,14,CTPFVSU95M2RQUCM,nu-Lite Satin Tie Pin Set  (Blue),,0.636353,2.7,77% off,False
+4,Women silk dress,Word2Vec cosine,15,CTPFVPN4CUY6QZXD,nu-Lite Satin Tie & Cufflink  (Multicolor),,0.636323,2.7,79% off,False
+4,Women silk dress,Word2Vec cosine,16,CTPFWYNJF8KMYKWG,nu-Lite Satin Tie Pin Set  (Purple),,0.636314,2.7,77% off,False
+4,Women silk dress,Word2Vec cosine,17,CTPFVZHFTSBTMH9M,nu-Lite Satin Tie & Cufflink  (Blue),,0.636123,2.7,79% off,False
+4,Women silk dress,Word2Vec cosine,18,CTPFVZGRKPGSFPUU,nu-Lite Satin Tie & Cufflink  (Black),,0.636108,2.7,79% off,False
+4,Women silk dress,Word2Vec cosine,19,CTPFVPGPW8DU3XJF,nu-Lite Satin Tie Pin Set  (Red),,0.636022,2.7,77% off,False
+4,Women silk dress,Word2Vec cosine,20,CTPFVZGY4PQHQNFH,nu-Lite Satin Tie & Cufflink  (Grey),,0.635833,2.7,79% off,False
+5,Men brown pant,Word2Vec cosine,1,TKPFU7EZK7UNYZFT,Solid Men Brown Track Pants,SMART ATTRACTI,0.794118,2.1,66% off,False
+5,Men brown pant,Word2Vec cosine,2,TKPFWCVUHX4QTUVG,Solid Men Brown Track Pants,Breakboun,0.780216,2.8,50% off,False
+5,Men brown pant,Word2Vec cosine,3,TKPFJQFWVKGVX4ZT,Solid Men Brown Track Pants,,0.769513,5.0,18% off,False
+5,Men brown pant,Word2Vec cosine,4,JEAFEH2TNJDVHC4D,Regular Men Dark Blue Jeans,Cher,0.769146,3.9,49% off,False
+5,Men brown pant,Word2Vec cosine,5,CRGFTB92YA7JNGQK,Men Cargos,chawla fashi,0.768458,2.8,38% off,False
+5,Men brown pant,Word2Vec cosine,6,CRGFTB92ZXC8BJJJ,Men Cargos,chawla fashi,0.768458,2.8,38% off,False
+5,Men brown pant,Word2Vec cosine,7,JEAFEHYVZHNURZYH,Regular Men Blue Jeans,Cher,0.767588,2.2,38% off,False
+5,Men brown pant,Word2Vec cosine,8,JEAFEH2S6NG6FGDN,Regular Men Blue Jeans,Cher,0.76528,4.0,38% off,False
+5,Men brown pant,Word2Vec cosine,9,JEAFEH2STJYPUEYQ,Regular Men Blue Jeans,Cher,0.76509,4.0,46% off,False
+5,Men brown pant,Word2Vec cosine,10,JEAFEH2TGHCEGZZ8,Regular Men Black Jeans,Cher,0.7647,3.9,38% off,False
+5,Men brown pant,Word2Vec cosine,11,JEAFEH2TAH6H5HEV,Regular Men Black Jeans,Cher,0.760718,3.9,46% off,False
+5,Men brown pant,Word2Vec cosine,12,TKPFP4PMZPSTGH6R,Solid Men Brown Track Pants,K,0.758606,3.9,54% off,False
+5,Men brown pant,Word2Vec cosine,13,CRGFHZHJMJKSNFP7,Men Cargos,chawla fashi,0.757553,3.2,38% off,False
+5,Men brown pant,Word2Vec cosine,14,CRGFHTY65RZAGMWN,Men Cargos,chawla fashi,0.750423,3.9,32% off,False
+5,Men brown pant,Word2Vec cosine,15,TKPFJHGZ6BGGWVRE,Solid Men Brown Track Pants,Oka,0.750219,3.8,41% off,False
+5,Men brown pant,Word2Vec cosine,16,CRGFXXP3GG9JAUHF,Men Cargos,Bindass Bo,0.735318,4.7,45% off,False
+5,Men brown pant,Word2Vec cosine,17,CRGFXXP3RCKDHCFG,Men Cargos,Bindass Bo,0.735318,4.7,45% off,False
+5,Men brown pant,Word2Vec cosine,18,CRGFXXP3XAJVX2G6,Men Cargos,Bindass Bo,0.735318,4.7,45% off,False
+5,Men brown pant,Word2Vec cosine,19,TROF7RJQZBSK3YZY,Regular Fit Men Brown Cotton Lycra Blend Trousers,DiscountZila Fashi,0.733388,2.5,67% off,False
+5,Men brown pant,Word2Vec cosine,20,TKPFWDMMBTFNFHVQ,Solid Men Brown Track Pants,TOM BU,0.72353,3.7,50% off,False

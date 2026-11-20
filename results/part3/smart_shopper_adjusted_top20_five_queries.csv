@@ -1,0 +1,84 @@
+query_id,query,ranking_method,rank,pid,title,brand,score,average_rating,discount,out_of_stock
+1,Women pyjamas,Smart Shopper Adjusted,1,PYJFZMJNGEDZGHEZ,Women Pyjama  (Pack of 1),Bonnevil,0.756793,,65% off,False
+1,Women pyjamas,Smart Shopper Adjusted,2,PYJFZMJNHZF3ZYNR,Women Pyjama  (Pack of 1),Bonnevil,0.756706,,65% off,False
+1,Women pyjamas,Smart Shopper Adjusted,3,PYJFZMJNRQDEFBHB,Women Pyjama  (Pack of 1),Bonnevil,0.756706,,65% off,False
+1,Women pyjamas,Smart Shopper Adjusted,4,PYJFZMJNAWFWGEGA,Women Pyjama  (Pack of 1),Bonnevil,0.756554,,65% off,False
+1,Women pyjamas,Smart Shopper Adjusted,5,PYJFZMJNFPHYWZN7,Women Pyjama  (Pack of 1),Bonnevil,0.756554,,65% off,False
+1,Women pyjamas,Smart Shopper Adjusted,6,PYJFZMJNGNZ6GMKZ,Women Pyjama  (Pack of 1),Bonnevil,0.756482,,65% off,False
+1,Women pyjamas,Smart Shopper Adjusted,7,PYJFZMJN25GEGHQE,Women Pyjama  (Pack of 1),Bonnevil,0.756363,,65% off,False
+1,Women pyjamas,Smart Shopper Adjusted,8,PYJFP3TARHZKVXJM,Women Pyjama  (Pack of 1),K,0.744374,3.9,43% off,False
+1,Women pyjamas,Smart Shopper Adjusted,9,PYJFP3TASZSPTGRK,Women Pyjama  (Pack of 1),K,0.74367,3.9,43% off,False
+1,Women pyjamas,Smart Shopper Adjusted,10,NSTFWFZZK6ASEJTJ,Women Solid Multicolor Top & Pyjama Set,INTER CREATI,0.736438,4.8,41% off,False
+1,Women pyjamas,Smart Shopper Adjusted,11,NSTFXK9YY3GHFYJT,Women Solid Multicolor Top & Pyjama Set,INTER CREATI,0.736438,4.8,41% off,False
+1,Women pyjamas,Smart Shopper Adjusted,12,PYJFPH8BQH4FGSRB,Women Pyjama  (Pack of 1),Urban D,0.734287,3.6,55% off,False
+1,Women pyjamas,Smart Shopper Adjusted,13,PYJFPH8CHCWNXHTG,Women Pyjama  (Pack of 1),Urban D,0.730431,3.4,55% off,False
+1,Women pyjamas,Smart Shopper Adjusted,14,PYJFP3TAZKYPYTRY,Women Pyjama  (Pack of 1),K,0.729578,3.4,43% off,False
+1,Women pyjamas,Smart Shopper Adjusted,15,PYJFPZ5ZJJHHMCY9,Women Pyjama  (Pack of 1),K,0.72536,4.3,25% off,False
+1,Women pyjamas,Smart Shopper Adjusted,16,PYJFZRBXRTSAKH4E,Women Pyjama  (Pack of 1),NETT,0.723341,,68% off,False
+1,Women pyjamas,Smart Shopper Adjusted,17,ETHFSRVEUG9Q4HTE,Women Kurta and Pyjama Set Cotton Blend,Jagdish Garmen,0.711491,5.0,55% off,False
+1,Women pyjamas,Smart Shopper Adjusted,18,NSTFV25KJ9G34MHC,Women Printed Multicolor Top & Pyjama Set,INTER CREATI,0.708916,3.7,44% off,False
+1,Women pyjamas,Smart Shopper Adjusted,19,PYJFZRB2HCRKNZYG,Women Pyjama  (Pack of 1),NETT,0.708756,,68% off,False
+1,Women pyjamas,Smart Shopper Adjusted,20,NSTFXK9NZMTEDJCR,Women Solid Multicolor Top & Pyjama Set,INTER CREATI,0.703438,3.7,41% off,False
+2,Blue navy jeans for women,Smart Shopper Adjusted,1,JEAFSKYHNDQXV5ZC,Tapered Fit Women Blue Jeans,ECKO Unl,0.605991,3.5,40% off,False
+2,Blue navy jeans for women,Smart Shopper Adjusted,2,JEAFVXFGRTEZZ3UB,Skinny Women Dark Blue Jeans,Lev,0.520949,2.2,28% off,False
+2,Blue navy jeans for women,Smart Shopper Adjusted,3,JEAFTZFX7HR5HZVW,Slim Women Dark Blue Jeans,Lev,0.418081,,20% off,True
+2,Blue navy jeans for women,Smart Shopper Adjusted,4,JEAFVWFK6AFRNSFY,Skinny Women Dark Blue Jeans,Lev,0.413978,,20% off,True
+2,Blue navy jeans for women,Smart Shopper Adjusted,5,JEAFQFGWXSVSMRWC,Slim Women Dark Blue Jeans,Lev,0.413812,,20% off,True
+2,Blue navy jeans for women,Smart Shopper Adjusted,6,JEAFSFTGDPEBJJGW,Slim Women Dark Blue Jeans,Lev,0.412778,,20% off,True
+2,Blue navy jeans for women,Smart Shopper Adjusted,7,TSHFTT2M3PH4CHRY,Solid Women Round Neck Blue T-Shirt,PixF,0.149476,4.5,77% off,False
+2,Blue navy jeans for women,Smart Shopper Adjusted,8,TSHFTT2NYGFHVGZX,Solid Women Round Neck Blue T-Shirt,PixF,0.147038,4.5,77% off,False
+2,Blue navy jeans for women,Smart Shopper Adjusted,9,TSHFTT2ZCNAHWWV7,Printed Women Round Neck Blue T-Shirt,PixF,0.144673,4.5,77% off,False
+2,Blue navy jeans for women,Smart Shopper Adjusted,10,TSHFTT2G6ZG6PVVH,Solid Women Round Neck Blue T-Shirt,PixF,0.143559,3.9,76% off,False
+2,Blue navy jeans for women,Smart Shopper Adjusted,11,TSHFTT32RDHXYTPW,Solid Women Round Neck Blue T-Shirt,PixF,0.141169,4.0,76% off,False
+2,Blue navy jeans for women,Smart Shopper Adjusted,12,TSHFPHPHR4QCCHGM,"Solid Women Henley Neck Dark Blue, Black T-Shirt  (Pack of 3)",SEVN,0.136846,3.8,80% off,False
+2,Blue navy jeans for women,Smart Shopper Adjusted,13,TSHFPHPHADJRNGSZ,"Solid Women Henley Neck Dark Blue, Green T-Shirt  (Pack of 3)",SEVN,0.136666,3.8,80% off,False
+2,Blue navy jeans for women,Smart Shopper Adjusted,14,TSHFPHPHMFZHKSKH,"Solid Women Henley Neck Dark Blue, Red T-Shirt  (Pack of 3)",SEVN,0.136348,3.8,80% off,False
+2,Blue navy jeans for women,Smart Shopper Adjusted,15,TSHFG287GG6YHXZD,Self Design Women Hooded Neck Dark Blue T-Shirt,Dudli,0.135917,4.1,44% off,False
+2,Blue navy jeans for women,Smart Shopper Adjusted,16,TSHEUQSW4JWMRWWC,"Solid Women V-Neck Red, Blue T-Shirt  (Pack of 2)",FLEXIM,0.134735,3.9,69% off,False
+2,Blue navy jeans for women,Smart Shopper Adjusted,17,TSHFZRGJRTWEQPYZ,Solid Women Round Neck Dark Blue T-Shirt,ARBO,0.133571,4.2,47% off,False
+2,Blue navy jeans for women,Smart Shopper Adjusted,18,TSHFYWYPAFGHWHAE,Printed Women Polo Neck Dark Blue T-Shirt,ARBO,0.130921,4.3,44% off,False
+2,Blue navy jeans for women,Smart Shopper Adjusted,19,TSHFY3EUCDPBYYFX,Color Block Women Round Neck Dark Blue T-Shirt,BLACK SN,0.128639,,56% off,False
+2,Blue navy jeans for women,Smart Shopper Adjusted,20,TSHFFHA5AFHKBKYW,Solid Women Hooded Neck Dark Blue T-Shirt,Dudli,0.128357,2.9,44% off,False
+3,Men dotted tie,Smart Shopper Adjusted,1,CTPFVSTDYXRPXGKY,nu-Lite Satin Tie & Cufflink  (Blue),,0.664919,2.7,71% off,False
+3,Men dotted tie,Smart Shopper Adjusted,2,CTPFVQNNHGYFTGFN,nu-Lite Satin Tie & Cufflink  (Blue),,0.663849,2.7,79% off,False
+3,Men dotted tie,Smart Shopper Adjusted,3,CTPFW6365D8JPGY5,nu-Lite Satin Tie Pin Set  (Pink),,0.64246,2.7,82% off,False
+4,Women silk dress,Smart Shopper Adjusted,1,KTAFVPFKWGDFQGEE,Women Solid Khadi Silk Ethnic Dress  (Black),SATDEVANGIKHADIBHAND,0.599833,3.8,30% off,False
+4,Women silk dress,Smart Shopper Adjusted,2,KTAFVPFKU9JYRNGZ,Women Solid Khadi Silk Ethnic Dress  (Black),SATDEVANGIKHADIBHAND,0.599574,3.8,30% off,False
+4,Women silk dress,Smart Shopper Adjusted,3,KTAFVPFKHZW4YVZS,Women Solid Khadi Silk Ethnic Dress  (Black),SATDEVANGIKHADIBHAND,0.599423,3.8,30% off,False
+4,Women silk dress,Smart Shopper Adjusted,4,KTAFVPFKACERTGVH,Women Solid Khadi Silk Ethnic Dress  (Black),SATDEVANGIKHADIBHAND,0.595311,3.8,30% off,False
+4,Women silk dress,Smart Shopper Adjusted,5,KTAFVPFKEY4RPDYF,Women Solid Khadi Silk Ethnic Dress  (Black),SATDEVANGIKHADIBHAND,0.594947,3.8,30% off,False
+4,Women silk dress,Smart Shopper Adjusted,6,KTAFVNGEJN3T79GR,Women Solid Cotton Blend Ethnic Dress  (Blue),Jagdish Garmen,0.375474,,58% off,False
+4,Women silk dress,Smart Shopper Adjusted,7,KTAFVNGENKKJNNGZ,Women Solid Cotton Blend Ethnic Dress  (Grey),Jagdish Garmen,0.375094,,58% off,False
+4,Women silk dress,Smart Shopper Adjusted,8,CTPFVZTEMJWEJJJV,nu-Lite Satin Tie & Cufflink  (Red),,0.13343,4.3,79% off,False
+4,Women silk dress,Smart Shopper Adjusted,9,CTPFVSU7CXFCXEHD,nu-Lite Satin Tie & Cufflink  (Blue),,0.093096,4.5,80% off,False
+4,Women silk dress,Smart Shopper Adjusted,10,CTPFVZHSA7G4PFC5,nu-Lite Satin Tie & Cufflink  (Grey),,0.091948,4.3,80% off,False
+4,Women silk dress,Smart Shopper Adjusted,11,CTPFVQSGZGPHUEFX,nu-Lite Satin Tie & Cufflink  (Black),,0.084395,3.3,79% off,False
+4,Women silk dress,Smart Shopper Adjusted,12,CTPFVPH2JGZRW6FV,nu-Lite Satin Tie & Cufflink  (Pink),,0.080164,2.7,80% off,False
+4,Women silk dress,Smart Shopper Adjusted,13,CTPFVPN4CUY6QZXD,nu-Lite Satin Tie & Cufflink  (Multicolor),,0.079788,2.7,79% off,False
+4,Women silk dress,Smart Shopper Adjusted,14,CTPFVPJZKBVGK2FV,nu-Lite Satin Tie & Cufflink  (Multicolor),,0.079787,2.7,79% off,False
+4,Women silk dress,Smart Shopper Adjusted,15,CTPFVZHFTSBTMH9M,nu-Lite Satin Tie & Cufflink  (Blue),,0.07972,2.7,79% off,False
+4,Women silk dress,Smart Shopper Adjusted,16,CTPFVZGY4PQHQNFH,nu-Lite Satin Tie & Cufflink  (Grey),,0.079711,2.7,79% off,False
+4,Women silk dress,Smart Shopper Adjusted,17,CTPFVZGRKPGSFPUU,nu-Lite Satin Tie & Cufflink  (Black),,0.079577,2.7,79% off,False
+4,Women silk dress,Smart Shopper Adjusted,18,CTPFVQNGFCRGYK2H,nu-Lite Satin Tie & Cufflink  (Beige),,0.079548,2.7,79% off,False
+4,Women silk dress,Smart Shopper Adjusted,19,CTPFVZEYHCRQ27Y2,nu-Lite Satin Tie & Cufflink  (Multicolor),,0.079517,2.7,79% off,False
+4,Women silk dress,Smart Shopper Adjusted,20,CTPFVZFYR8KGYYBJ,nu-Lite Satin Tie & Cufflink  (Multicolor),,0.079517,2.7,79% off,False
+5,Men brown pant,Smart Shopper Adjusted,1,TKPFU7EZK7UNYZFT,Solid Men Brown Track Pants,SMART ATTRACTI,0.654895,2.1,66% off,False
+5,Men brown pant,Smart Shopper Adjusted,2,TKPFWDMMBTFNFHVQ,Solid Men Brown Track Pants,TOM BU,0.638023,3.7,50% off,False
+5,Men brown pant,Smart Shopper Adjusted,3,TKPFJHGZ6BGGWVRE,Solid Men Brown Track Pants,Oka,0.621926,3.8,41% off,False
+5,Men brown pant,Smart Shopper Adjusted,4,TKPFJQFWVKGVX4ZT,Solid Men Brown Track Pants,,0.620399,5.0,18% off,False
+5,Men brown pant,Smart Shopper Adjusted,5,TKPFWCVUHX4QTUVG,Solid Men Brown Track Pants,Breakboun,0.61646,2.8,50% off,False
+5,Men brown pant,Smart Shopper Adjusted,6,TROEUTRGAY4USVPS,Slim Fit Men Brown Polycotton Trousers,Inspi,0.610023,3.6,68% off,False
+5,Men brown pant,Smart Shopper Adjusted,7,TROEDVF5YUXUH2ZU,"Slim Fit Men Brown, Black Cotton Blend Trousers",Inspi,0.606196,3.6,65% off,False
+5,Men brown pant,Smart Shopper Adjusted,8,TKPFVFXWBYEYSZW5,Solid Men Brown Track Pants,TOM BU,0.604929,4.1,38% off,False
+5,Men brown pant,Smart Shopper Adjusted,9,TROE3KVQYZHZG2DV,"Pack Of Black & D.Khaki Slim Fit Men Brown, Black Cotton Blend Trousers",Inspi,0.604822,3.6,65% off,False
+5,Men brown pant,Smart Shopper Adjusted,10,TROF9ZBSPBS6GWS8,Slim Fit Men Brown Cotton Lycra Blend Trousers,INSPI,0.603283,3.5,66% off,False
+5,Men brown pant,Smart Shopper Adjusted,11,TROE367EEBB6BNTC,"Pack Of 3 Slim Fit Men Blue, Brown, Black Cotton Viscose Blend Trousers",Inspi,0.595881,3.6,70% off,False
+5,Men brown pant,Smart Shopper Adjusted,12,TKPFE7E8SHY75HG9,Solid Men Brown Track Pants,Mountain colou,0.594984,4.0,62% off,False
+5,Men brown pant,Smart Shopper Adjusted,13,TKPFHBS92PJUBJ63,Solid Men Brown Track Pants,Mountain colou,0.594938,4.0,63% off,False
+5,Men brown pant,Smart Shopper Adjusted,14,TROFMQ6HUJMV8WFC,"Slim Fit Men Brown, Black Polyester Viscose Blend Trousers",Inspi,0.594922,3.7,67% off,False
+5,Men brown pant,Smart Shopper Adjusted,15,TROFPX6875BYWYVX,"Slim Fit Men Blue, Brown, Black Polyester Blend Trousers",Inspi,0.590988,3.5,58% off,False
+5,Men brown pant,Smart Shopper Adjusted,16,TKPFP4PMZPSTGH6R,Solid Men Brown Track Pants,K,0.590225,3.9,54% off,False
+5,Men brown pant,Smart Shopper Adjusted,17,TKPF7BXYDG3DXQ9F,Printed Men Brown Track Pants,Mountain colou,0.589245,4.0,65% off,False
+5,Men brown pant,Smart Shopper Adjusted,18,TKPF7BXYCZGFHNG5,Solid Men Brown Track Pants,Mountain colou,0.585911,3.9,65% off,False
+5,Men brown pant,Smart Shopper Adjusted,19,TROE2HZR85AE4ET2,Slim Fit Men Brown Cotton Viscose Blend Trousers,Inspi,0.585098,3.6,62% off,False
+5,Men brown pant,Smart Shopper Adjusted,20,TROF55VGC2MZFZ7K,Slim Fit Men Brown Polyester Viscose Blend Trousers,Inspi,0.581361,3.7,62% off,False

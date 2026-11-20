@@ -1,0 +1,44 @@
+{
+  "corpus_size": 28080,
+  "vocabulary_size": 21073,
+  "query_semantics": "Part 2 Boolean AND",
+  "methods": [
+    "TF-IDF cosine",
+    "BM25",
+    "Custom",
+    "Word2Vec cosine"
+  ],
+  "bm25": {
+    "k1": 1.5,
+    "b": 0.75
+  },
+  "custom_score": "Smart Shopper Score",
+  "custom_weights": {
+    "tfidf_cosine": 0.4,
+    "product_type_match": 0.2,
+    "rating": 0.15,
+    "discount": 0.15,
+    "stock": 0.1
+  },
+  "product_type_rule": "Requested clothing type in title or subcategory; 0.5 neutral when unrecognized",
+  "experimental_adjustments": {
+    "method": "Smart Shopper Adjusted",
+    "product_type_multiplier_on_mismatch": 0.35,
+    "attribute_multiplier_on_mismatch": 0.7,
+    "type_fields": [
+      "title",
+      "sub_category"
+    ],
+    "attribute_fields": [
+      "title",
+      "product_details"
+    ],
+    "no_recognized_query_factor": 1.0
+  },
+  "word2vec": {
+    "size": 100,
+    "window": 5,
+    "epochs": 10,
+    "seed": 42
+  }
+}
