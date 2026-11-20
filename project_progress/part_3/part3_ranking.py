@@ -3,6 +3,7 @@
 This file builds on project_progress.part_2.search_engine rather than replacing
 Part 1 preprocessing or Part 2 indexing and retrieval.
 """
+### Imports and dependencies
 from __future__ import annotations
 
 from collections import Counter
@@ -19,6 +20,7 @@ from project_progress.part_2.search_engine import (
     load_processed, parse_tokens, preprocess, stopword_set,
 )
 
+### Predefined queries from part2
 QUERIES = [
     "Women pyjamas",
     "Blue navy jeans for women",
@@ -27,7 +29,7 @@ QUERIES = [
     "Men brown pant",
 ]
 
-
+### Load the processed data (logic depending on where and how the dataset is located)
 def _find_csv_files_in_zip(data_dir: Path) -> bool:
     """Use existing project data/processed_data.zip if it contains the two CSVs."""
     archive = data_dir / "processed_data.zip"
@@ -65,7 +67,7 @@ def ensure_part2_data(data_dir: Path) -> None:
         "data/fashion_products_dataset.json from the course."
     )
 
-
+### Normalization functions for product attributes
 def _number(value):
     if pd.isna(value) if not isinstance(value, (list, dict)) else False:
         return None
@@ -105,7 +107,13 @@ def _stock_norm(row: dict) -> float:
         return 1.0
     return 0.5
 
-
+### Ranker class, main part of Part 3
+### Functionality: Load and organize data, 
+#                  build inverted index, 
+#                  process queries, 
+#                  retrieve candidates, 
+#                  calculate ranking scores, 
+#                  return ranked products
 class Part3Ranker:
     """Four scoring methods over a single shared Part 2 AND candidate set."""
 
@@ -151,6 +159,8 @@ class Part3Ranker:
     def candidates(self, query: str) -> list[str]:
         return conjunctive_search(query, self.idx, self.stops)
 
+    ### Ranking methods
+    # tfidf + cosine
     def _cosine_for_candidates(self, query: str, candidates: list[str]) -> dict[str, float]:
         query_tf = Counter(self.terms(query))
         query_weights = {t: f * self.idf.get(t, 0.0) for t, f in query_tf.items()}
@@ -169,6 +179,7 @@ class Part3Ranker:
         candidates = self.candidates(query)
         return self._sorted(self._cosine_for_candidates(query, candidates))
 
+    #BM25
     def bm25(self, query: str, k1: float = 1.5, b: float = 0.75):
         if k1 <= 0 or not 0 <= b <= 1:
             raise ValueError("BM25 requires k1>0 and 0<=b<=1")
@@ -185,6 +196,7 @@ class Part3Ranker:
             scores[pid] = score
         return self._sorted(scores)
 
+    #custom scoring
     def custom(self, query: str):
         """0.60 cosine + 0.15 title match + 0.10 rating + 0.05 discount + 0.10 stock.
 
