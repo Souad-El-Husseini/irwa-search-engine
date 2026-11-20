@@ -25,6 +25,11 @@ Part 2 turns the prepared fashion catalog into a ranked search system and evalua
 
 The field `product_details` is converted to searchable **attribute values**, not attribute names. The extra term-position information permits possible later phrase/proximity work but is not required for the Part 2 AND operation.
 
+## Results files
+
+All Part 2 generated CSV/JSON files are stored in `results/part2/` at the repository root.
+The Python scripts and Part 2 notebook write to this folder; Part 3 outputs are kept separately in `results/part3/`.
+
 ## Run commands
 
 From the repository root (`irwa-search-engine`), after installing requirements and NLTK stopwords as described in the [root README](../../README.md):

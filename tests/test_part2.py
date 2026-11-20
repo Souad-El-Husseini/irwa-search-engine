@@ -20,6 +20,10 @@ class Part2Tests(unittest.TestCase):
         scored=rank_documents('cotton sweatshirt',idx,normalize_tf(tf),idf,stopword_set())
         self.assertEqual([x[0] for x in scored],['A'])
 
+    def test_part2_results_are_separate_from_part3(self):
+        from project_progress.part_2.run_part2 import ROOT, RESULTS
+        self.assertEqual(RESULTS, ROOT / 'results' / 'part2')
+
     def test_metrics_hand_checked(self):
         labels=[1,0,1,0,1]
         self.assertAlmostEqual(precision_at_k(labels,5),0.6)

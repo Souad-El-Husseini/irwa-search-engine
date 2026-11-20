@@ -7,7 +7,7 @@ from .evaluation import evaluate_qrels, aggregate, evaluate
 
 ROOT=Path(__file__).resolve().parents[2]
 DATA=ROOT/'data'
-RESULTS=ROOT/'results'
+RESULTS=ROOT/'results'/'part2'
 VALIDATION={1:'women full sleeve sweatshirt cotton',2:'men slim jeans blue'}
 CUSTOM=[
     'Women pyjamas',

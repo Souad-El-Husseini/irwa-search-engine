@@ -2,7 +2,7 @@
 
 **Course:** Information Retrieval and Web Analytics (IRWA)  
 **Project:** Fashion product search engine  
-**Status:** Parts 1 and 2 completed; Part 3 ranking implementation added and awaiting full-dataset evaluation. Part 4 is a future project stage.
+**Status:** Parts 1 and 2 completed; Part 3 ranking implementation and results uploaded (final report pending). Part 4 is a future project stage.
 
 This repository contains Python code for a local information retrieval engine over the provided fashion-products dataset. Part 1 performs text preprocessing. Part 2 builds a seven-field inverted index, retrieves documents using Boolean **AND**, ranks matches using a TF-IDF weighted dot product, and evaluates the results with instructor-supplied and custom relevance judgments.
 
@@ -35,15 +35,23 @@ irwa-search-engine/
 │       ├── part3_ranking.py
 │       ├── run_part3.py
 │       └── README.md
-├── results/                                  # Reproducible CSV outputs
-│   ├── custom_query_top20_ranked.csv
-│   ├── human_aggregate.csv
-│   ├── human_metrics.csv
-│   ├── methodology.json
-│   ├── query_counts.csv
-│   ├── validation_aggregate.csv
-│   ├── validation_metrics.csv
-│   └── validation_qrels_debug.csv
+├── results/                                  # Reproducible CSV/JSON outputs
+│   ├── part2/                                # Part 2 indexing and evaluation
+│   │   ├── custom_query_top20_ranked.csv
+│   │   ├── human_aggregate.csv
+│   │   ├── human_metrics.csv
+│   │   ├── methodology.json
+│   │   ├── query_counts.csv
+│   │   ├── validation_aggregate.csv
+│   │   ├── validation_metrics.csv
+│   │   └── validation_qrels_debug.csv
+│   └── part3/                                # Part 3 ranking experiments
+│       ├── README.md
+│       ├── methodology.json
+│       ├── part3_top20_all_methods.csv
+│       ├── query_counts.csv
+│       ├── smart_shopper_adjusted_top20_five_queries.csv
+│       └── word2vec_top20_five_queries.csv
 ├── static/
 │   └── styles/
 │   │   ├── bootstrap.min.css
@@ -104,13 +112,13 @@ For notebook execution, open `project_progress/part_2/part2-indexing-and-evaluat
 
 | Output | Description |
 |---|---|
-| `results/validation_metrics.csv` | Per-query scores for the two instructor validation queries |
-| `results/validation_aggregate.csv` | MAP@10 and MRR@10 for instructor queries |
-| `results/custom_query_top20_ranked.csv` | Ranked top-20 product listings for each custom query |
-| `results/query_counts.csv` | AND-retrieval match counts |
-| `results/human_metrics.csv` | Five custom-query metrics using completed relevance labels |
-| `results/human_aggregate.csv` | MAP@10 and MRR@10 for custom queries |
-| `results/methodology.json` | Evaluation settings, index fields, and model description |
+| `results/part2/validation_metrics.csv` | Per-query scores for the two instructor validation queries |
+| `results/part2/validation_aggregate.csv` | MAP@10 and MRR@10 for instructor queries |
+| `results/part2/custom_query_top20_ranked.csv` | Ranked top-20 product listings for each custom query |
+| `results/part2/query_counts.csv` | AND-retrieval match counts |
+| `results/part2/human_metrics.csv` | Five custom-query metrics using completed relevance labels |
+| `results/part2/human_aggregate.csv` | MAP@10 and MRR@10 for custom queries |
+| `results/part2/methodology.json` | Evaluation settings, index fields, and model description |
 
 **Evaluation method:** K = 10; the 40 instructor judgments cover only part of the collection, so the report uses a judged-only condensed ranking for those queries. Custom-query recall is based on labeled *retrieved* products, not all relevant products in the corpus. See [Part 2 README] for definitions, numerical results and limitations.
 
