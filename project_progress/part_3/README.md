@@ -9,11 +9,20 @@ Part 3 extends our existing search engine from Part 2 by implementing and compar
 - TF-IDF + Cosine Similarity
 - BM25
 - Custom Smart Shopper Score
+- Experimental adjusted Smart Shopper ranking (wrong-type and attribute penalties)
 - Word2Vec + Cosine Similarity
 
 ## Custom Score
 
 Our Smart Shopper Score uses TF-IDF cosine relevance (40%), product-type match in title or subcategory (20%), average rating (15%), discount (15%), and stock availability (10%). All terms are normalized to [0, 1]. Relevance and product type account for 60% of the score; ratings, savings, and availability account for the other 40%. These are proposed design weights, not empirically optimized parameters.
+
+## Experimental Adjustment
+
+We retain the original Smart Shopper Score as a baseline. The separate experimental method named `Smart Shopper Adjusted` uses
+
+`Adjusted = Original Smart Shopper Score × product_type_factor × attribute_factor`
+
+A recognized wrong clothing type gets factor **0.35** (matched: **1.0**), based on title and subcategory. A requested color, material, or pattern missing from title and product details gets **0.70** (matched: **1.0**). A query with no recognized clothing type or attribute receives a neutral factor of **1.0**. These values are starting heuristics, not validated optimal settings. All methods still use the same Boolean AND candidates.
 
 ## Project Files
 
@@ -39,6 +48,7 @@ Results will be saved under `results/part3/`, including:
 
 - `part3_top20_all_methods.csv`
 - `word2vec_top20_five_queries.csv`
+- `smart_shopper_adjusted_top20_five_queries.csv`
 - `query_counts.csv`
 - `methodology.json`
 
