@@ -8,8 +8,12 @@ Part 3 extends our existing search engine from Part 2 by implementing and compar
 
 - TF-IDF + Cosine Similarity
 - BM25
-- Custom Fashion Shopping Score
+- Custom Smart Shopper Score
 - Word2Vec + Cosine Similarity
+
+## Custom Score
+
+Our Smart Shopper Score uses TF-IDF cosine relevance (40%), product-type match in title or subcategory (20%), average rating (15%), discount (15%), and stock availability (10%). All terms are normalized to [0, 1]. Relevance and product type account for 60% of the score; ratings, savings, and availability account for the other 40%. These are proposed design weights, not empirically optimized parameters.
 
 ## Project Files
 
