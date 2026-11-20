@@ -27,7 +27,7 @@ def run(repo_root: Path = ROOT, vector_size=100, epochs=10):
     for query_id, query in enumerate(QUERIES, 1):
         count = len(model.candidates(query))
         counts.append({"query_id": query_id, "query": query, "and_matches": count})
-        for method in ("TF-IDF cosine", "BM25", "Custom", "Word2Vec cosine"):
+        for method in ("TF-IDF cosine", "BM25", "Custom", "Smart Shopper Adjusted", "Word2Vec cosine"):
             frame = model.results_table(query, method, top_k=20)
             frame.insert(0, "ranking_method", method)
             frame.insert(0, "query", query)
@@ -38,6 +38,8 @@ def run(repo_root: Path = ROOT, vector_size=100, epochs=10):
     ranks.to_csv(output_dir / "part3_top20_all_methods.csv", index=False)
     ranks[ranks.ranking_method == "Word2Vec cosine"].to_csv(
         output_dir / "word2vec_top20_five_queries.csv", index=False)
+    ranks[ranks.ranking_method == "Smart Shopper Adjusted"].to_csv(
+        output_dir / "smart_shopper_adjusted_top20_five_queries.csv", index=False)
     pd.DataFrame(counts).to_csv(output_dir / "query_counts.csv", index=False)
     metadata = {
         "corpus_size": model.N, "vocabulary_size": len(model.df),
@@ -48,6 +50,14 @@ def run(repo_root: Path = ROOT, vector_size=100, epochs=10):
         "custom_weights": {"tfidf_cosine": 0.40, "product_type_match": 0.20,
                            "rating": 0.15, "discount": 0.15, "stock": 0.10},
         "product_type_rule": "Requested clothing type in title or subcategory; 0.5 neutral if unrecognized",
+        "experimental_adjustments": {
+            "method": "Smart Shopper Adjusted",
+            "product_type_multiplier_on_mismatch": 0.35,
+            "attribute_multiplier_on_mismatch": 0.70,
+            "type_fields": ["title", "sub_category"],
+            "attribute_fields": ["title", "product_details"],
+            "no_recognized_query_factor": 1.0,
+        },
         "word2vec": {"training": "Fashion corpus, skip-gram", "dimensions": vector_size,
                      "window": 5, "epochs": epochs, "seed": 42, "min_count": 1},
         "queries": QUERIES,
