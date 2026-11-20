@@ -30,6 +30,27 @@ QUERIES = [
 ]
 
 ### Load the processed data (logic depending on where and how the dataset is located)
+# Curated clothing-type aliases; normalized using Part 2 preprocessing.
+# Only title and subcategory count as product-type matches.
+PRODUCT_TYPE_ALIASES = (
+    ("pyjama", "pajama", "sleepwear", "nightwear"),
+    ("jean",),
+    ("tie", "necktie"),
+    ("dress", "gown"),
+    ("pant", "trouser", "jogger"),
+    ("shirt", "tshirt", "tee"),
+    ("skirt",),
+    ("jacket", "coat"),
+    ("shoe", "sneaker", "trainer"),
+    ("top", "blouse"),
+    ("short",),
+)
+PRODUCT_TYPE_GROUPS = tuple(
+    frozenset(token for variant in variants for token in preprocess(variant, set()))
+    for variants in PRODUCT_TYPE_ALIASES
+)
+
+
 def _find_csv_files_in_zip(data_dir: Path) -> bool:
     """Use existing project data/processed_data.zip if it contains the two CSVs."""
     archive = data_dir / "processed_data.zip"
@@ -198,24 +219,30 @@ class Part3Ranker:
 
     #custom scoring
     def custom(self, query: str):
-        """0.60 cosine + 0.15 title match + 0.10 rating + 0.05 discount + 0.10 stock.
+        """Smart Shopper Score: 40% cosine + 20% product-type match
+        + 15% rating + 15% discount + 10% availability.
 
-        These are DESIGN choices, not empirically optimized weights.
-        Keep text relevance dominant. Values are normalized to [0,1].
+        These are design choices, not optimized parameters. All five
+        components are in [0, 1]; AND retrieval remains unchanged.
         """
         candidates = self.candidates(query)
         cosine = self._cosine_for_candidates(query, candidates)
-        terms = set(self.terms(query))
+        query_terms = set(self.terms(query))
+        requested_types = [group for group in PRODUCT_TYPE_GROUPS if group & query_terms]
         scores = {}
         for pid in candidates:
             row = self.products_by_pid[pid]
-            title_terms = set(self.token_fields[pid]["title"])
-            title_coverage = len(terms & title_terms) / len(terms) if terms else 0.0
+            product_type_terms = (set(self.token_fields[pid]["title"])
+                                  | set(self.token_fields[pid]["sub_category"]))
+            type_match = (
+                sum(bool(group & product_type_terms) for group in requested_types)
+                / len(requested_types) if requested_types else 0.5
+            )
             scores[pid] = (
-                0.60 * cosine[pid]
-                + 0.15 * title_coverage
-                + 0.10 * _rating_norm(row)
-                + 0.05 * _discount_norm(row)
+                0.40 * cosine[pid]
+                + 0.20 * type_match
+                + 0.15 * _rating_norm(row)
+                + 0.15 * _discount_norm(row)
                 + 0.10 * _stock_norm(row)
             )
         return self._sorted(scores)
