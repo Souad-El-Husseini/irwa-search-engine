@@ -57,6 +57,21 @@ class Part3Tests(unittest.TestCase):
         ranked = self.engine.custom("blue cotton")
         self.assertEqual({pid for pid, _ in ranked}, {"A", "B"})
 
+    def test_smart_shopper_weights(self):
+        query = "blue cotton"
+        cosine = self.engine._cosine_for_candidates(query, ["A"])["A"]
+        # Unknown product type: P receives the neutral score 0.5.
+        expected = 0.40 * cosine + 0.20 * 0.5 + 0.15 * (4.8 / 5) + 0.15 * 0.35 + 0.10
+        self.assertAlmostEqual(dict(self.engine.custom(query))["A"], expected)
+
+    def test_smart_shopper_product_type(self):
+        query = "red jeans"
+        self.assertEqual(self.engine.candidates(query), ["C"])
+        cosine = self.engine._cosine_for_candidates(query, ["C"])["C"]
+        # "jeans" in the title gives full product-type credit.
+        expected = 0.40 * cosine + 0.20 + 0.15 * 0.5 + 0.15 * 0 + 0.10
+        self.assertAlmostEqual(dict(self.engine.custom(query))["C"], expected)
+
     def test_word2vec(self):
         self.engine.train_word2vec(vector_size=12, epochs=3)
         ranked = self.engine.word2vec_cosine("blue cotton")
