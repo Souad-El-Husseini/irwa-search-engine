@@ -51,6 +51,47 @@ PRODUCT_TYPE_GROUPS = tuple(
 )
 
 
+# Recognized query attributes, using the same Porter stemming as Part 2.
+# Blue and navy belong to one color group, so they are not double-counted.
+ATTRIBUTE_ALIASES = (
+    ("blue", "navy"),
+    ("brown",),
+    ("black",),
+    ("white",),
+    ("red",),
+    ("green",),
+    ("pink",),
+    ("yellow",),
+    ("grey", "gray"),
+    ("silk",),
+    ("cotton",),
+    ("linen",),
+    ("wool",),
+    ("leather",),
+    ("dotted", "dot", "polka dot", "polka dots"),
+    ("striped", "stripe"),
+    ("checked", "checkered", "plaid"),
+    ("floral", "flower"),
+)
+ATTRIBUTE_GROUPS = tuple(
+    frozenset(token for variant in variants for token in preprocess(variant, set()))
+    for variants in ATTRIBUTE_ALIASES
+)
+
+
+def _matching_groups(query_terms: set[str], groups) -> list[frozenset[str]]:
+    """Return query characteristics, with synonyms counted only once."""
+    return [group for group in groups if group & query_terms]
+
+
+def _match_factor(requested_groups, product_terms: set[str], minimum: float) -> float:
+    """Matched = 1.0; absent = minimum; unspecified query = neutral 1.0."""
+    if not requested_groups:
+        return 1.0
+    matches = sum(bool(group & product_terms) for group in requested_groups)
+    return minimum + (1.0 - minimum) * matches / len(requested_groups)
+
+
 def _find_csv_files_in_zip(data_dir: Path) -> bool:
     """Use existing project data/processed_data.zip if it contains the two CSVs."""
     archive = data_dir / "processed_data.zip"
@@ -247,6 +288,28 @@ class Part3Ranker:
             )
         return self._sorted(scores)
 
+    def custom_adjusted(self, query: str):
+        """Experimental adjustment of the existing Smart Shopper Score.
+
+        Product-type mismatch gets multiplier 0.35.
+        Requested color/material/pattern mismatch gets multiplier 0.70.
+        Exact matches have multiplier 1.0. Unspecified factors stay at 1.0.
+        AND retrieval and the original custom() score stay unchanged.
+        """
+        original_scores = dict(self.custom(query))
+        query_terms = set(self.terms(query))
+        requested_types = _matching_groups(query_terms, PRODUCT_TYPE_GROUPS)
+        requested_attributes = _matching_groups(query_terms, ATTRIBUTE_GROUPS)
+        scores = {}
+        for pid, base_score in original_scores.items():
+            fields = self.token_fields[pid]
+            type_terms = set(fields["title"]) | set(fields["sub_category"])
+            attribute_terms = set(fields["title"]) | set(fields["product_details"])
+            type_factor = _match_factor(requested_types, type_terms, 0.35)
+            attribute_factor = _match_factor(requested_attributes, attribute_terms, 0.70)
+            scores[pid] = base_score * type_factor * attribute_factor
+        return self._sorted(scores)
+
     def train_word2vec(self, vector_size=100, window=5, epochs=10, seed=42):
         """Learn vectors on our own corpus, averaging all seven fields per product."""
         from gensim.models import Word2Vec
@@ -300,6 +363,7 @@ class Part3Ranker:
             "TF-IDF cosine": self.tfidf_cosine,
             "BM25": self.bm25,
             "Custom": self.custom,
+            "Smart Shopper Adjusted": self.custom_adjusted,
             "Word2Vec cosine": self.word2vec_cosine,
         }
         if ranking not in methods:
